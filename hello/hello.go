@@ -16,10 +16,21 @@ func main() {
 
 	// Request a greeting message.
 
-	for i := 0; i < 20; i++ {
+	for i := 0; i < 2; i++ {
 		printMessage()
 	}
 
+	// A slice of names.
+	names := []string{"Adri", "Balu", "Kati", "Laci"}
+
+	// Request a greeting messages for the names.
+	messages, err := greetings.Hellos(names)
+	if err != nil {
+		log.Fatal(err)
+	}
+	// If no error was returned, print the returned map of
+	// messages to the console
+	fmt.Println(messages)
 }
 
 func printMessage() {
