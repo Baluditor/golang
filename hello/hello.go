@@ -15,9 +15,16 @@ func main() {
 	log.SetFlags(0)
 
 	// Request a greeting message.
-	message, err := greetings.Hello("")
+
+	for i := 0; i < 20; i++ {
+		printMessage()
+	}
+
+}
+
+func printMessage() {
+	message, err := greetings.Hello("Adri")
 	// If an error was returned, print it to the console
-	// and exit the program.
 	if err != nil {
 		log.Fatal(err)
 	}
