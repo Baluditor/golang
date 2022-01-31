@@ -3,9 +3,11 @@ package main
 import (
 	"fmt"
 
-	"rsc.io/quote"
+	"github.com/baluditor/golang/greetings"
 )
 
 func main() {
-	fmt.Println(quote.Go())
+	// Get a greeting message and print it.
+	message := greetings.Hello("Adri")
+	fmt.Println(message)
 }
